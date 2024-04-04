@@ -11,6 +11,9 @@ Para gerar as imagens PNG, utilize a seguinte linha de comando:
 
 ```bash
 ffmpeg -f rawvideo -pix_fmt yuv420p -s 1280x720 -r 60 -i /home/gaci/videos/720p/FourPeople_1280x720_60.yuv -vf "fps=1" frame_%04d.png
+ou
+ffmpeg -f rawvideo -pix_fmt yuv420p10le -s 3840x2160 -r 60 -i /home/gaci/videos/4K/Tango2_3840x2160_60fps_10bit_420.yuv -vframes 16 quadro_Tango2_%04d.png
+-vframes = os 16 primeiros frames
 ```
 
 ### Explicação dos Parâmetros
